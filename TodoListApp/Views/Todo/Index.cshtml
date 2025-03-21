@@ -1,0 +1,36 @@
+@model IEnumerable<TodoListApp.Models.TodoItem>
+
+@{
+    ViewData["Title"] = "Lista de Tareas";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Agregar Nueva Tarea</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tarea</th>
+            <th>Completado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Task</td>
+                <td>@(item.IsCompleted ? "Sí" : "No")</td>
+                <td class="d-flex gap-2">
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <form asp-action="Delete" asp-route-id="@item.Id" method="post" onsubmit="return confirm('¿Estás seguro de que deseas eliminar esta tarea?');">
+                      <button type="submit" class="btn btn-danger">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
