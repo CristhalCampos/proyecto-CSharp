@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aNxHnoJHL+w=",
+  "dgSpecHash": "SroU2uHm1ps=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Cris\\source\\repos\\MyProject\\TodoListApp\\TodoListApp.csproj",
+  "projectFilePath": "C:\\Users\\Cris\\source\\repos\\proyecto-CSharp\\TodoListApp\\TodoListApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cris\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Cris\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
